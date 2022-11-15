@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="CSS/style.css">
+		<link rel="stylesheet" href="CSS/taskbar.css">
+		<link rel="stylesheet" href="CSS/window.css">
+		<link rel="shortcut icon" href="resources/taskbar/startLogo.png" type="image/x-icon">
+		<title>My Desktop</title>
+	</head>
+
+	<body id="sys" onload="startTime()">
+	<!--<body id="sys" class="" style="background: url('https://loremflickr.com/320/240'); background-size: cover" onload="startTime()">-->
+		
+		<div id="winArea" class="winArea">
+			
+		</div>
+
+											<!--        TASK BAR HERE         -->
+		<div class="taskbar">
+			<div id="btnStart" class="taskbar-button">
+				<img src="resources/taskbar/startLogo.png" alt="">
+				Menu
+			</div>
+
+											<!--        TASKS HERE         -->
+			
+			<div id="tasks" style="width: 100%;"></div>
+
+											<!--        NOTIFICATION HERE         -->
+				<div class="taskbar-notify">
+					<!--<div><img src="resources/taskbar/placeholderIconSmall.png"></div>
+					<div><img src="resources/taskbar/placeholderIconSmall.png"></div>
+					<div id="notifyTest"><img src="resources/taskbar/placeholderIconSmall.png"></div>-->
+					<label id="time">??:??</label>
+				</div>
+		</div>
+		
+											<!--        START MENU HERE         -->
+		<div id="startMenu" class="taskbar-startMenu">
+			<div class="taskbar-items-list">
+				<div id="version" class="taskbar-startMenu-item">
+					<img src="resources/taskbar/placeholderIcon.png" alt="">
+					<label>System Version</label>
+				</div>
+			
+				<div id="SocialMedia" class="taskbar-startMenu-item">
+					<img src="resources/taskbar/placeholderIcon.png" alt="">
+					<label>Social Media</label>
+				</div>
+
+				<div class="separator"></div>
+
+				<div id="openTestWin" class="taskbar-startMenu-item">
+					<img src="http://pudim.com.br/pudim.jpg" alt="">
+					<label>Bassoon Tracker</label>
+				</div>
+				<div id="openAnotherTestWin" class="taskbar-startMenu-item">
+					<img src="resources/taskbar/placeholderIcon.png" alt="">
+					<label>Random cat</label>
+				</div>
+				<div class="taskbar-startMenu-item">
+					<img src="resources/taskbar/folderIcon.png" alt="">
+					<label>Pasta Teste</label>
+					<!--<div class="subMenu" style="transform: translate(220px);">
+						<div class="item">
+							Um
+						</div>
+						<div class="item">
+							Dois
+						</div>
+						<div class="item">
+							EBAAAAAAAAAAAAAAAA
+						</div>
+						<div class="item">
+							Dois
+						</div>
+						<div class="item">
+							Vinte e dez
+						</div>
+						<div class="item">
+							WEPAA
+						</div>
+					</div>-->
+				</div>
+
+				<div class="separator"></div>
+
+				<div id="btnShutdown" class="taskbar-startMenu-item" alt="">
+					<img src="resources/taskbar/shutdownIcon.png">
+					<label>Shut down...</label>
+					</div>
+			</div>
+
+			
+		</div>
+
+		
+
+		<script src="JS/taskbar.js"></script>
+		<script src="JS/window.js"></script>
+		<script src="JS/index.js"></script>
+
+		<script>
+			
+		</script>
+	</body>
+</html>

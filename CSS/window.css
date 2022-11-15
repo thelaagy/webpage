@@ -1,0 +1,128 @@
+
+.window{
+	position: absolute;
+	background-color: var(--taskbar-color);
+	text-align: center;
+
+    box-shadow: 0px 0px 20px black;
+
+    
+
+    box-shadow: black 0px 2px, black 2px 0px, black 2px 2px,
+        white 0px -2px, white -2px 0px, white -2px -2px, black -2px 2px, black 2px -2px,        
+        var(--taskbar-3D-color) 0px -2px inset, var(--taskbar-3D-color) -2px 0px inset, var(--taskbar-3D-color) -2px -2px inset, var(--taskbar-3D-color2) -2px 2px inset, var(--taskbar-3D-color2) 2px -2px inset,
+        var(--taskbar-3D-color2) 0px 2px inset, var(--taskbar-3D-color2) 2px 0px inset, var(--taskbar-3D-color2) 2px 2px inset;
+
+    text-overflow: none;
+    padding: 2px;
+}
+
+.window.minimized{
+    display: none !important;
+}
+
+.window .titlebar{
+	padding: 4px;
+	background: linear-gradient(45deg, gray, lightgray);
+	color: #fff;
+
+    text-align: left;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.window .titlebar.active{
+    background: linear-gradient(45deg, var(--startMenu-gradiant1), var(--startMenu-gradiant2));
+}
+
+.window .titlebar .closebutton,
+.window .titlebar .minbutton{
+    float: right;
+    width: 16px;
+    height: 16px;
+    background: var(--taskbar-color);
+    margin-left: 6px;
+
+    box-shadow: black 0px 2px, black 2px 0px, black 2px 2px,
+        white 0px -2px, white -2px 0px, white -2px -2px, black -2px 2px, black 2px -2px,        
+        var(--taskbar-3D-color) 0px -2px inset, var(--taskbar-3D-color) -2px 0px inset, var(--taskbar-3D-color) -2px -2px inset, var(--taskbar-3D-color2) -2px 2px inset, var(--taskbar-3D-color2) 2px -2px inset,
+        var(--taskbar-3D-color2) 0px 2px inset, var(--taskbar-3D-color2) 2px 0px inset, var(--taskbar-3D-color2) 2px 2px inset;
+}
+
+.window .titlebar .closebutton:active,
+.window .titlebar .minbutton:active{
+    background: var(--taskbar-active);
+
+    box-shadow: white 0px 2px, white 2px 0px, white 2px 2px,
+        black 0px -2px, black -2px 0px, black -2px -2px, white -2px 2px, white 2px -2px,        
+        var(--taskbar-3D-color2) 0px -2px inset, var(--taskbar-3D-color2) -2px 0px inset, var(--taskbar-3D-color2) -2px -2px inset, var(--taskbar-3D-color) -2px 2px inset, var(--taskbar-3D-color) 2px -2px inset,
+        var(--taskbar-3D-color) 0px 2px inset, var(--taskbar-3D-color) 2px 0px inset, var(--taskbar-3D-color) 2px 2px inset;
+
+    /*box-shadow: 2px 0px white, 0px 2px white, 2px 2px white, -2px -2px black, -2px -0px black, 0px -2px black, 2px -2px white, -2px 2px white;*/
+}
+
+.window .titlebar .closebutton::before, .window .titlebar .closebutton::after{
+    position: relative;
+    display: inline-block;
+    content: ' ';
+    height: 8px;
+    width: 1px;
+    background-color: black;
+}
+
+.window .titlebar .closebutton::before{
+    transform: rotate(45deg);
+    left: 7px;
+    top: 0px;
+}
+
+.window .titlebar .closebutton::after{
+    transform: rotate(-45deg);
+    left: 6px;
+    top: 0px;
+}
+
+.window .titlebar .minbutton::before{
+    position: relative;
+    display: inline-block;
+    content: ' ';
+    height: 1.5px;
+    width: 6px;
+    left: 4px;
+    bottom: 0px;
+    background-color: black;
+}
+
+.window .titlebar img{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 4px;
+}
+
+.window .content{
+    padding: 10px;
+}
+
+.window .content .separator{
+    border-top: 2px solid var(--taskbar-3D-color);
+    border-bottom: 2px solid white;
+    width: calc(100% - 12px);
+    display: block;
+    margin: 4px;
+    margin-bottom: 8px;
+
+    float: left;
+}
+
+
+.winArea{
+    top: 0;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    /*background: black;*/
+}

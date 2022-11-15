@@ -1,0 +1,20 @@
+
+
+:root{
+    --win-black:        #000000;
+    --win-gray:         #7E7E7E;
+    --win-lightgray:    #BEBEBE;
+    --win-white:        #FFFFFF;
+    --win-darkred:      #7E0000;
+    --win-red:          #FE0000;
+    --win-darkgreen:    #407E00;
+    --win-green:        #60FF04;
+    --win-darkyellow:   #7E7E00;
+    --win-yellow:       #FFFF04;
+    --win-darkblue:     #00007e;
+    --win-blue:         #0000FF;
+    --win-darkmagenta:  #7E007E;
+    --win-magenta:      #FE00FF;
+    --win-darkcyan:     #047E7E;
+    --win-cyan:         #06FFFF;
+}

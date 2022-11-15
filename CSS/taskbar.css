@@ -1,0 +1,321 @@
+.taskbar{
+    height: 22px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+    left: 0px;
+
+    background-color: var(--taskbar-color);
+
+    z-index: 30;
+
+    padding: 4px 0px 4px 0px;
+
+    
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+
+    border-top: var(--taskbar-color) 2px solid;
+}
+
+.taskbar::after{
+    height: 24px;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+
+    z-index: -1;
+    
+    content: "";
+
+    transform: translateX(-2px);
+    transform: translateY(-4px);
+
+    
+
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    border-top: white 2px solid;
+}
+
+.taskbar .taskbar-button{
+    float: left;
+
+    margin: 4px;
+    margin-top: 2px;
+    display: inline-flex;
+
+    padding: 2px;
+    padding-right: 4px;
+    padding-right: 4px;
+
+    box-shadow: black 0px 2px, black 2px 0px, black 2px 2px,
+        white 0px -2px, white -2px 0px, white -2px -2px, black -2px 2px, black 2px -2px,        
+        var(--taskbar-3D-color) 0px -2px inset, var(--taskbar-3D-color) -2px 0px inset, var(--taskbar-3D-color) -2px -2px inset, var(--taskbar-3D-color2) -2px 2px inset, var(--taskbar-3D-color2) 2px -2px inset,
+        var(--taskbar-3D-color2) 0px 2px inset, var(--taskbar-3D-color2) 2px 0px inset, var(--taskbar-3D-color2) 2px 2px inset;
+
+    width: -moz-fit-content;
+    width: fit-content;
+
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+
+    height: calc(100% - 6px);
+
+    position: relative;
+    cursor: default;
+    /*font-weight: bolder;*/
+
+    vertical-align: top;
+}
+
+.taskbar .taskbar-button.win{
+    min-width: 0;
+    max-width: 160px;
+    width: 100%;
+    font-weight: normal;
+
+    display: flex;
+
+    flex-shrink: 0;
+}
+
+.taskbar .taskbar-button.win span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    /*z-index: -1;*/
+}
+
+.taskbar .taskbar-button:active, .taskbar .taskbar-button.active{
+    background: var(--taskbar-active);
+
+    box-shadow: white 0px 2px, white 2px 0px, white 2px 2px,
+        black 0px -2px, black -2px 0px, black -2px -2px, white -2px 2px, white 2px -2px,        
+        var(--taskbar-3D-color2) 0px -2px inset, var(--taskbar-3D-color2) -2px 0px inset, var(--taskbar-3D-color2) -2px -2px inset, var(--taskbar-3D-color) -2px 2px inset, var(--taskbar-3D-color) 2px -2px inset,
+        var(--taskbar-3D-color) 0px 2px inset, var(--taskbar-3D-color) 2px 0px inset, var(--taskbar-3D-color) 2px 2px inset;
+
+}
+
+.taskbar .taskbar-button.win.active span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.taskbar img{
+    
+    width: 12px;
+    height: 12px;
+    
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.taskbar .taskbar-notify{
+    float: right;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 4px 4px 4px 4px;
+
+    height: 16px;
+
+    display: flex;
+    overflow: none;
+
+
+    box-shadow: 
+    var(--taskbar-3D-color2) 0px -2px inset, var(--taskbar-3D-color2) -2px 0px inset, var(--taskbar-3D-color2) -2px -2px inset, var(--taskbar-3D-color) -2px 2px inset, var(--taskbar-3D-color) 2px -2px inset,
+        var(--taskbar-3D-color) 0px 2px inset, var(--taskbar-3D-color) 2px 0px inset, var(--taskbar-3D-color) 2px 2px inset;
+}
+
+.taskbar .taskbar-notify label{
+    right: 0px;
+    float: right;
+    margin-right: 2px;
+    padding: 0px 4px 0px 4px;
+
+    border-bottom-color: white;
+    border-right-color: white;
+}
+
+.taskbar #btnStart{
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+}
+
+.taskbar-startMenu{
+    display: none;
+    float: left;
+    bottom: 22px;
+    left: 4px;
+
+    background: var(--taskbar-color);
+
+    position: fixed;
+    display: none;
+
+    box-shadow: black 0px 2px, black 2px 0px, black 2px 2px,
+        white 0px -2px, white -2px 0px, white -2px -2px, black -2px 2px, black 2px -2px,        
+        var(--taskbar-3D-color) 0px -2px inset, var(--taskbar-3D-color) -2px 0px inset, var(--taskbar-3D-color) -2px -2px inset, var(--taskbar-3D-color2) -2px 2px inset, var(--taskbar-3D-color2) 2px -2px inset,
+        var(--taskbar-3D-color2) 0px 2px inset, var(--taskbar-3D-color2) 2px 0px inset, var(--taskbar-3D-color2) 2px 2px inset;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    width: 100%;
+    max-width: 260px;
+
+    z-index: 31;
+
+    overflow: hidden;
+
+    
+}
+
+.taskbar-startMenu::after{
+    content: var(--startMenuText);
+    color: white;
+
+    position: absolute;
+    z-index: -2;
+    
+    left: 2px;
+    bottom: 2px;
+
+    
+    transform: rotate(180deg);
+
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+
+    padding-left: 2px;
+    padding-top: 12px;
+
+    width: 22px;
+    height: calc(100% - 16px);
+
+    font-weight: bold;
+
+    font-size: large;
+    letter-spacing: 10px;
+
+
+    background: linear-gradient(0deg ,var(--startMenu-gradiant2), var(--startMenu-gradiant1));
+}
+
+.taskbar-startMenu.open{
+    display: block;
+}
+
+.taskbar-items-list{
+    margin-left: 24px;
+}
+
+.taskbar-startMenu .taskbar-startMenu-item{
+    float: left;
+    padding: 8px;
+    margin: 2px;
+    overflow: hidden;
+
+    height: 32px;
+    /*min-width: 200px;*/
+    width: calc(100% - 20px);
+    display: block;
+}
+
+.taskbar-startMenu .taskbar-startMenu-item:hover{
+    color: white;
+    background: var(--selection-color);
+}
+
+.taskbar-startMenu .taskbar-startMenu-item img{
+    height: 32px;
+    width: 32px;
+    float: left;
+}
+
+.taskbar-startMenu .taskbar-startMenu-item label{
+    margin-left: 8px;
+    margin-top: 8px;
+    left: 80px;
+    
+}
+
+.taskbar-startMenu .separator{
+    border-top: 2px solid var(--taskbar-3D-color);
+    border-bottom: 2px solid white;
+    width: calc(100% - 12px);
+    display: block;
+    margin: 4px;
+
+    float: left;
+}
+
+.hide{
+    visibility: none;
+}
+
+.taskbar img, .taskbar-startMenu img{
+    pointer-events: none;
+    
+}
+
+#tasks{
+    height: 22px;
+    width: 100%;
+    overflow: none;
+    display: flex;
+}
+
+
+.subMenu{
+    background: var(--taskbar-color);
+
+    position: fixed;
+
+    padding: transparent solid 2px;
+
+    box-shadow: black 0px 2px, black 2px 0px, black 2px 2px,
+        white 0px -2px, white -2px 0px, white -2px -2px, black -2px 2px, black 2px -2px,        
+        var(--taskbar-3D-color) 0px -2px inset, var(--taskbar-3D-color) -2px 0px inset, var(--taskbar-3D-color) -2px -2px inset, var(--taskbar-3D-color2) -2px 2px inset, var(--taskbar-3D-color2) 2px -2px inset,
+        var(--taskbar-3D-color2) 0px 2px inset, var(--taskbar-3D-color2) 2px 0px inset, var(--taskbar-3D-color2) 2px 2px inset;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    width: fit-content;
+
+    overflow: hidden;
+
+    transform-origin: left bottom;
+
+    float: right;
+}
+
+.subMenu .item{
+    
+    padding: 2px;
+    margin: 2px;
+}
+
+.subMenu .item:hover{
+    background-color: var(--selection-color);
+    color: white;
+}

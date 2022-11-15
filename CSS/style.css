@@ -1,0 +1,49 @@
+
+:root{
+
+    /* The system "title" */
+    --startMenuText: "Web Windows";
+
+    /* Colors */
+    --taskbar-color: lightgray;
+    --selection-color: darkmagenta;
+    --taskbar-3D-color: gray;
+    --taskbar-3D-color2: #F0F0F0;
+
+    --taskbar-active: darkgray;
+
+    --startMenu-gradiant1: darkmagenta;
+    --startMenu-gradiant2: darkcyan;
+}
+
+@font-face {
+    font-family: WinFont;
+    src: url('../resources/fonts/w95fa.woff') format('woff');
+}
+
+*{
+    font-family: monospace;
+    /*font-size: 16px;*/
+    /*font-weight: 100;*/
+}
+
+body{
+    overflow: none;
+    background: linear-gradient(45deg ,darkcyan, darkmagenta);
+    /*background: url("http://pudim.com.br/pudim.jpg");*/
+    background-size: cover;
+    position: fixed;
+    /*background-color: blue;*/
+    background-repeat: none;
+    background-attachment: fixed;
+}
+
+img{
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated; /* Chrome */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}

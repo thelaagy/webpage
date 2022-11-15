@@ -33,7 +33,7 @@ document.getElementById("version").addEventListener('click', function(){
 		Web Windows
 	</h1>
 	<div class="separator"></div>
-	<p>Version: DEV 01 (UNRELEASED)</p>
+	<p>Version: DEV 01 ALPHA</p>
 	<p>Copyright © Laggy 2022 All rights reserved.</p>
 	<p>Licence key: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</p>
 	`, "resources/taskbar/startLogo.png");
